@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'layouts#index'
+  root to: 'pages#index'
 
 
   resources :prices
