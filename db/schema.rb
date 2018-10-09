@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_230712) do
+ActiveRecord::Schema.define(version: 2018_10_09_005328) do
 
   create_table "credit_notes", force: :cascade do |t|
     t.date "creation_date"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_230712) do
     t.string "description"
     t.integer "received_amount"
     t.integer "commission"
-    t.string "comissioner"
+    t.string "commissioner"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_230712) do
 
   create_table "vehicles", force: :cascade do |t|
     t.string "patent"
-    t.string "type"
+    t.string "vehicle_type"
     t.string "brand"
     t.string "model"
     t.string "color"
@@ -162,6 +162,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_230712) do
     t.integer "receipt_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "receipt_assigned_amount_to_wash"
     t.index ["receipt_id"], name: "index_washes_on_receipt_id"
     t.index ["vehicle_id"], name: "index_washes_on_vehicle_id"
     t.index ["wash_type_id"], name: "index_washes_on_wash_type_id"
