@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+  get 'washers/show'
   root to: 'pages#index'
 
 
@@ -22,4 +24,6 @@ Rails.application.routes.draw do
           registrations: 'washers/registrations'
         }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :washers, only: :show
 end
