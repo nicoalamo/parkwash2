@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Intranet Parkwash</title>
+  </head>
+  <body>
+
+    <h1>Intranet Parkwash</h1>
+
+    <ul>
+
+      <% if washer_signed_in?  %>
+        <p>Hola Washer. Estás Loggeado con Washer Email: <%= @washer.email %> </p>
+        <li><%= link_to "Editar Perfil de Washer", edit_user_registration_path %></li>
+        <li><%= link_to 'Washer Sign Out', destroy_user_session_path, method: :delete %></li>
+
+      <% else %>
+        <p>No estás loggeado bajo ninguna sesión de Washer </p>
+        <li><%= link_to 'Washer Sign In', new_user_session_path%></li>
+        <li><%= link_to 'Washer Sign Up', new_user_registration_path  %></li>
+
+      <% end  %>
+
+  </body>
+</html>

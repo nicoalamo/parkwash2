@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'washers/show'
   root to: 'pages#index'
 
+  get 'pages/index_washers'
+
 
   resources :prices
   resources :reconciliations
