@@ -4,19 +4,26 @@ class Washers::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+  def new
+    debugger
+    super
+    redirect_to pages_index_washers_path
+  end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    debugger
+    super
+    redirect_to pages_index_washers_path
+
+  end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    debugger
+    super
+    redirect_to pages_index_washers_path
+  end
 
   # protected
 

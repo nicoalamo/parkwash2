@@ -17,7 +17,7 @@ class VehiclesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create vehicle" do
     assert_difference('Vehicle.count') do
-      post vehicles_url, params: { vehicle: { brand: @vehicle.brand, color: @vehicle.color, model: @vehicle.model, patent: @vehicle.patent, status: @vehicle.status, type: @vehicle.type, user_id: @vehicle.user_id, vehicle_size_id: @vehicle.vehicle_size_id } }
+      post vehicles_url, params: { vehicle: { brand: @vehicle.brand, color: @vehicle.color, model: @vehicle.model, patent: @vehicle.patent, status: @vehicle.status, type: @vehicle.vehicle_type, user_id: @vehicle.user_id, vehicle_size_id: @vehicle.vehicle_size_id } }
     end
 
     assert_redirected_to vehicle_url(Vehicle.last)
@@ -34,7 +34,7 @@ class VehiclesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vehicle" do
-    patch vehicle_url(@vehicle), params: { vehicle: { brand: @vehicle.brand, color: @vehicle.color, model: @vehicle.model, patent: @vehicle.patent, status: @vehicle.status, type: @vehicle.type, user_id: @vehicle.user_id, vehicle_size_id: @vehicle.vehicle_size_id } }
+    patch vehicle_url(@vehicle), params: { vehicle: { brand: @vehicle.brand, color: @vehicle.color, model: @vehicle.model, patent: @vehicle.patent, status: @vehicle.status, type: @vehicle.vehicle_type, user_id: @vehicle.user_id, vehicle_size_id: @vehicle.vehicle_size_id } }
     assert_redirected_to vehicle_url(@vehicle)
   end
 

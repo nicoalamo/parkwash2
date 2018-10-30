@@ -26,3 +26,7 @@
  *= require_tree .
  *= require_self
  */
+
+a.btn.btn-primary:visited {
+  color : lightblue;
+}

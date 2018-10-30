@@ -19,7 +19,7 @@ class VehiclesTest < ApplicationSystemTestCase
     fill_in "Model", with: @vehicle.model
     fill_in "Patent", with: @vehicle.patent
     fill_in "Status", with: @vehicle.status
-    fill_in "Type", with: @vehicle.type
+    fill_in "Type", with: @vehicle.vehicle_type
     fill_in "User", with: @vehicle.user_id
     fill_in "Vehicle Size", with: @vehicle.vehicle_size_id
     click_on "Create Vehicle"
@@ -37,7 +37,7 @@ class VehiclesTest < ApplicationSystemTestCase
     fill_in "Model", with: @vehicle.model
     fill_in "Patent", with: @vehicle.patent
     fill_in "Status", with: @vehicle.status
-    fill_in "Type", with: @vehicle.type
+    fill_in "Type", with: @vehicle.vehicle_type
     fill_in "User", with: @vehicle.user_id
     fill_in "Vehicle Size", with: @vehicle.vehicle_size_id
     click_on "Update Vehicle"

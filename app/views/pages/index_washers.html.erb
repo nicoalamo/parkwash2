@@ -11,14 +11,33 @@
     <ul>
 
       <% if washer_signed_in?  %>
+
         <p>Hola Washer. Estás Loggeado con Washer Email: <%= @washer.email %> </p>
-        <li><%= link_to "Editar Perfil de Washer", edit_user_registration_path %></li>
-        <li><%= link_to 'Washer Sign Out', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Editar Perfil de Washer", edit_washer_registration_path %></li>
+        <li><%= link_to 'Washer Sign Out', destroy_washer_session_path, method: :delete %></li>
+        <li><%= link_to 'Crear Usuario', new_user_registration_path %></li>
+        <li><%= link_to 'Crear Recinto', new_place_path %></li>
+        <li><%= link_to 'Crear Tamaño Vehículo', new_vehicle_size_path %></li>
+        <li><%= link_to 'Crear Tipo de Lavado', new_wash_type_path %></li>
+        <li><%= link_to 'Crear Vehículo', new_vehicle_path %></li>
+        <li><%= link_to 'Crear Lavado', new_wash_path %></li>
+        <li><%= link_to 'Crear Boleta', new_receipt_path %></li>
+        <li><%= link_to 'Crear Pago de Cliente', new_payment_path %></li>
+        <li><%= link_to 'Crear Nota de Crédito', new_credit_note_path %></li>
+        <li><%= link_to 'Crear Conciliación Boleta/Pago', new_reconciliation_path %></li>
+        <li><%= link_to 'Crear Precio', new_price_path %></li>
+
+        <%= render 'pages/signed_in_washer' %>
+
+
+
+
+
 
       <% else %>
         <p>No estás loggeado bajo ninguna sesión de Washer </p>
-        <li><%= link_to 'Washer Sign In', new_user_session_path%></li>
-        <li><%= link_to 'Washer Sign Up', new_user_registration_path  %></li>
+        <li><%= link_to 'Washer Sign In', new_washer_session_path%></li>
+        <li><%= link_to 'Washer Sign Up', new_washer_registration_path  %></li>
 
       <% end  %>
 
