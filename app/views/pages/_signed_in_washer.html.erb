@@ -1,4 +1,7 @@
 
+
+
+
 <div class="row">
 
   <div class="offset-md-1 col-md-7">
@@ -18,22 +21,22 @@
         <tr>
           <th scope="row">1</th>
           <th>Lavadores</th>
-          <td><%= link_to "Ver Lavadores", edit_washer_registration_path, class: "btn btn-light" %></td>
+          <td><%= link_to "Ver Lavadores", washers_path, class: "btn btn-light" %></td>
           <td><%= link_to "Nuevo Lavador", edit_washer_registration_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
           <th>Usuarios</th>
-          <td><%= link_to "Ver Usuarios", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nuevo Usuario", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver Usuarios", users_path, class: "btn btn-light" %></td>
+          <td><%= link_to "Nuevo Usuario", new_user_registration_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
           <th>Vehículos</th>
-          <td><%= link_to "Ver Vehículos", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nuevo Vehículo", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver Vehículos", vehicles_path, class: "btn btn-light" %></td>
+          <td><%= link_to "Nuevo Vehículo", new_vehicle_path, class: "btn btn-primary" %></td>
         </tr>
 
       </tbody>
@@ -42,6 +45,8 @@
   </div>
 
 </div>
+
+<div style = "margin-top: 50px"> </div>
 
 
 <div class="row">
@@ -63,36 +68,36 @@
         <tr>
           <th scope="row">1</th>
           <th>Lavados</th>
-          <td><%= link_to "Ver Lavados", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nuevo Lavado", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver Lavados", washes_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nuevo Lavado", new_wash_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
           <th>Pagos</th>
-          <td><%= link_to "Ver Pagos", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nuevo Pago", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver Pagos", payments_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nuevo Pago", new_payment_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
           <th>Boleta</th>
-          <td><%= link_to "Ver Boleta", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nueva Boleta", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver Boleta", receipts_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nueva Boleta", new_receipt_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
           <th>Nota de Crédito</th>
-          <td><%= link_to "Ver NCs", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nueva NC", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver NCs", credit_notes_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nueva NC", new_credit_note_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
           <th>Conciliación</th>
-          <td><%= link_to "Ver Conciliación", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nueva Asignación", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <td><%= link_to "Ver Conciliación", reconciliations_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nueva Asignación", new_reconciliation_path, class: "btn btn-primary" %></td>
         </tr>
 
       </tbody>
@@ -102,13 +107,15 @@
 
 </div>
 
+<div style = "margin-top: 50px"> </div>
+
 <div class="row">
 
   <div class="offset-md-1 col-md-7">
 
-    <h2>Agregando Nuevos Lavados y Pagos</h2>
+    <h2>Cambiando Parámetros Fijos</h2>
 
-    <table class="table table-striped">
+    <table class="table table-bordered""">
       <thead>
         <tr>
           <th scope="col"></th>
@@ -120,39 +127,31 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <th>Lavados</th>
-          <td><%= link_to "Ver Lavados", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nuevo Lavado", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <th>Recintos</th>
+          <td><%= link_to "Ver Recintos", places_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nuevo Recinto", new_place_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
-          <th>Pagos</th>
-          <td><%= link_to "Ver Pagos", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nuevo Pago", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <th>Tamaños de Vehículos</th>
+          <td><%= link_to "Ver Tamaño de Vehículos", vehicle_sizes_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nuevo Tamaño de Vehículo", new_vehicle_size_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
-          <th>Boleta</th>
-          <td><%= link_to "Ver Boleta", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nueva Boleta", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <th>Tipos de Lavado</th>
+          <td><%= link_to "Ver Tipo de Lavado", wash_types_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nuevo Tipo de Lavado", new_wash_type_path, class: "btn btn-primary" %></td>
         </tr>
 
         <tr>
           <th scope="row">1</th>
-          <th>Nota de Crédito</th>
-          <td><%= link_to "Ver NCs", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nueva NC", edit_washer_registration_path, class: "btn btn-primary" %></td>
+          <th>Precios</th>
+          <td><%= link_to "Ver Lista de Precios", prices_path, class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "Nuevo Precio", new_price_path, class: "btn btn-primary" %></td>
         </tr>
-
-        <tr>
-          <th scope="row">1</th>
-          <th>Conciliación</th>
-          <td><%= link_to "Ver Conciliación", edit_washer_registration_path, class: "btn btn-light" %></td>
-          <td><%= link_to "Nueva Asignación", edit_washer_registration_path, class: "btn btn-primary" %></td>
-        </tr>
-
 
       </tbody>
     </table>
