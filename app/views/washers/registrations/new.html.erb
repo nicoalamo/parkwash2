@@ -7,13 +7,38 @@
     <%= devise_error_messages! %>
 
     <div class="field">
+      <%= f.label :rut %><br />
+      <%= f.text_field :rut, autofocus: true, autocomplete: "rut" %>
+    </div>
+
+    <div class="field">
       <%= f.label :first_name %><br />
-      <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+      <%= f.text_field :first_name, autocomplete: "first_name" %>
     </div>
 
     <div class="field">
       <%= f.label :last_name %><br />
       <%= f.text_field :last_name, autocomplete: "last_name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :cellphone %><br />
+      <%= f.text_field :cellphone, autocomplete: "cellphone" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :city %><br />
+      <%= f.text_field :city, autocomplete: "city" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :birth_date %><br />
+      <%= f.date_field :birth_date, autocomplete: "birth_date" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :role %><br />
+      <%= f.number_field :role, autocomplete: "role" %>
     </div>
 
     <div class="field">
@@ -35,7 +60,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", class: "btn btn-primary" %>
     </div>
   <% end %>
 
