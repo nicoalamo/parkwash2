@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :place
+  has_many :vehicles, dependent: :delete_all
 end

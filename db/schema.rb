@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_09_005328) do
+ActiveRecord::Schema.define(version: 2018_11_01_183543) do
 
   create_table "credit_notes", force: :cascade do |t|
     t.date "creation_date"
@@ -30,10 +30,8 @@ ActiveRecord::Schema.define(version: 2018_10_09_005328) do
     t.integer "received_amount"
     t.integer "commission"
     t.string "commissioner"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
   create_table "places", force: :cascade do |t|
